@@ -92,9 +92,11 @@ SOFTWARE.
             <clobbers target="cordova.openwith" />
         </js-module>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
-            <!-- Open With  -->
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+	   <!-- Open With  -->
+	   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	</config-file>
+	<config-file target="AndroidManifest.xml" parent="/manifest/application/activity">    
             <intent-filter>
                 <!-- category android:name="android.intent.category.BROWSABLE" / -->
                 <!-- See https://developer.android.com/guide/topics/manifest/data-element.html -->
@@ -102,7 +104,7 @@ SOFTWARE.
                 <action android:name="android.intent.action.SEND" />
                 $ANDROID_EXTRA_ACTIONS
                 <!-- action android:name="android.intent.action.VIEW" / -->
-                <!-- action android:name="android.intent.action.SEND_MULTIPLE" / -->
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </config-file>
