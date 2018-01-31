@@ -33,8 +33,8 @@ SOFTWARE.
     <engines>
         <engine name="cordova" version=">=6.0.0" />
     </engines>
-    <repo>https://github.com/j3k0/cordova-plugin-openwith.git</repo>
-    <issue>https://github.com/j3k0/cordova-plugin-openwith/issues</issue>
+    <repo>https://github.com/JanST123/cordova-plugin-openwith.git</repo>
+    <issue>https://github.com/JanST123/cordova-plugin-openwith/issues</issue>
 
 	<license>MIT</license>
     <keywords>cordova,phonegap,openwith,ios,android</keywords>
@@ -92,10 +92,7 @@ SOFTWARE.
             <clobbers target="cordova.openwith" />
         </js-module>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-	   <!-- Open With  -->
-	   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-	</config-file>
+
 	<config-file target="AndroidManifest.xml" parent="/manifest/application/activity">    
             <intent-filter>
                 <!-- category android:name="android.intent.category.BROWSABLE" / -->
